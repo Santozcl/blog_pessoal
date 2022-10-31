@@ -23,7 +23,7 @@ import { UsuarioModule } from './usuario/usuario.module';
     }), */
     TypeOrmModule.forRoot({
       type: 'postgres',
-      url: process.env.DATTABASE_URL,
+      url: process.env.DATABASE_URL,
       logging: false,
       ssl:{
         rejectUnauthorized: false
