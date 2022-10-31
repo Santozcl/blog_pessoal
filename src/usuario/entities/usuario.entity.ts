@@ -23,9 +23,11 @@ public usuario: string;
 public senha: string;
 
 
+@ApiProperty()
 @Column({length: 5000})
 public foto: string;
 
+@ApiProperty()
 @OneToMany(()=> Postagem,(postagem)=> postagem.usuario)
 postagem: Postagem[]
 
