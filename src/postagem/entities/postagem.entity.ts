@@ -17,18 +17,23 @@ export class Postagem {
     @Column ({length: 100, nullable: false})
     titulo: string
 
+
+    @ApiProperty()
     @IsNotEmpty ()
     @Column ({length: 100, nullable: false})
     texto: string;
 
+    @ApiProperty()
     @UpdateDateColumn ()
     data: Date;
 
+    @ApiProperty()
     @ManyToOne (() => Tema, (tema) => tema.postagem,{
         onDelete: "CASCADE"
     })
     tema: Tema
 
+    @ApiProperty()
     @ManyToOne(()=> Usuario,(usuario) => usuario.postagem,{
 
         onDelete: 'CASCADE'
